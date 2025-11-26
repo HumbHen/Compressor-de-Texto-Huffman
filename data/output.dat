@@ -1,0 +1,15 @@
+TEXTO 1:
+Frequências: {'o': 1, 'computador': 1, 'executa': 1, 'instruções': 1, 'em': 1, 'alta': 1, 'velocidade': 1, 'e': 1, 'processa': 1, 'dados': 1, 'com': 1, 'precisão.': 1}
+Códigos: {'dados': '000', 'processa': '001', 'com': '010', 'alta': '011', 'e': '1000', 'instruções': '1001', 'computador': '1010', 'em': '1011', 'o': '1100', 'executa': '1101', 'velocidade': '1110', 'precisão.': '1111'}
+Comprimido: 11001010110110011011011111010000010000101111
+
+TEXTO 2:
+Frequências: {'a': 1, 'memória': 1, 'armazena': 1, 'informações': 1, 'que': 1, 'são': 1, 'acessadas': 1, 'rapidamente': 1, 'pela': 1, 'cpu.': 1}
+Códigos: {'dados': '000', 'processa': '001', 'com': '010', 'alta': '011', 'e': '1000', 'instruções': '1001', 'computador': '1010', 'em': '1011', 'o': '1100', 'executa': '1101', 'velocidade': '1110', 'precisão.': '1111', 'que': '000', 'informações': '001', 'a': '010', 'armazena': '011', 'pela': '100', 'são': '101', 'acessadas': '1100', 'cpu.': '1101', 'rapidamente': '1110', 'memória': '1111'}
+Comprimido: 0101111011001000101110011101001101
+
+TEXTO 3:
+Frequências: {'os': 2, 'sistemas': 1, 'operacionais': 1, 'controlam': 1, 'recursos': 1, 'e': 1, 'coordenam': 1, 'as': 1, 'tarefas': 1, 'do': 1, 'processador.': 1}
+Códigos: {'dados': '000', 'processa': '001', 'com': '010', 'alta': '011', 'e': '001', 'instruções': '1001', 'computador': '1010', 'em': '1011', 'o': '1100', 'executa': '1101', 'velocidade': '1110', 'precisão.': '1111', 'que': '000', 'informações': '001', 'a': '010', 'armazena': '011', 'pela': '100', 'são': '101', 'acessadas': '1100', 'cpu.': '1101', 'rapidamente': '1110', 'memória': '1111', 'do': '000', 'os': '01', 'recursos': '1000', 'as': '1001', 'tarefas': '1010', 'controlam': '1011', 'sistemas': '1100', 'operacionais': '1101', 'coordenam': '1110', 'processador.': '1111'}
+Comprimido: 011100110110110110000011110100110100001111
+
