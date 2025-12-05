@@ -1,7 +1,6 @@
 import heapq
 import os
 
-# Classe para representar um nó da Árvore de Huffman
 class HuffmanNode:
     def __init__(self, word, freq):
         self.word = word
@@ -13,7 +12,6 @@ class HuffmanNode:
     def __lt__(self, other):
         return self.freq < other.freq
 
-# Função para calcular frequência das palavras
 def calcular_frequencias(texto):
     palavras = texto.lower().split()
     freq = {}
@@ -21,7 +19,6 @@ def calcular_frequencias(texto):
         freq[palavra] = freq.get(palavra, 0) + 1
     return freq
 
-# Construção da árvore de Huffman
 def construir_arvore(freq):
     heap = []
 
@@ -38,7 +35,25 @@ def construir_arvore(freq):
 
     return heap[0]
 
-# Geração dos códigos binários
+def desenhar_arvore_ascii(no, prefixo="", eh_ultimo=True):
+    if no is None:
+        return ""
+
+    linha = prefixo
+    linha += "└── " if eh_ultimo else "├── "
+
+    if no.word is None:
+        linha += f"* ({no.freq})\n"
+    else:
+        linha += f"{no.word} ({no.freq})\n"
+
+    prefixo += "    " if eh_ultimo else "│   "
+
+    esquerda = desenhar_arvore_ascii(no.left, prefixo, False)
+    direita  = desenhar_arvore_ascii(no.right, prefixo, True)
+
+    return linha + esquerda + direita
+
 def gerar_codigos(no, codigo_atual="", codigos={}):
     if no is None:
         return
@@ -51,13 +66,11 @@ def gerar_codigos(no, codigo_atual="", codigos={}):
 
     return codigos
 
-# Compressão do texto
 def comprimir(texto, codigos):
     palavras = texto.lower().split()
     comprimido = "".join(codigos[p] for p in palavras)
     return comprimido
 
-# Leitura dos textos e geração do output.dat
 def processar():
     caminho = os.path.join("data", "input.dat")
     with open(caminho, "r", encoding="utf-8") as f:
@@ -72,6 +85,7 @@ def processar():
         texto_comprimido = comprimir(texto, codigos)
 
         saida += f"TEXTO {i+1}:\n"
+        saida += f"Árvore de Huffman:\n{ desenhar_arvore_ascii(arvore) }\n"
         saida += f"Frequências: {freq}\n"
         saida += f"Códigos: {codigos}\n"
         saida += f"Comprimido: {texto_comprimido}\n\n"
