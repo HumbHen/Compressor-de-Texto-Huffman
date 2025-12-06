@@ -20,7 +20,6 @@ O programa:
   - Frequências das palavras
   - Códigos binários gerados
   - Texto comprimido
-  - Dados suficientes para decodificação
 
 ---
 
