@@ -87,9 +87,3 @@ Comprimido: 1100101011011001...
 Humberto Henrique Lima Cunha  
 Disciplina: Algoritmos e Estruturas de Dados II — CEFET-MG  
 Data de entrega: 06/12/2025
-
----
-
-## Licença
-
-Projeto desenvolvido exclusivamente para fins educacionais.
